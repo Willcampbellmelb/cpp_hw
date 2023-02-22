@@ -20,11 +20,16 @@ using std::endl;
 using std::string;
 
 using std::string_literals::operator""s;
-std::string generated_adjective(string a, string b) {
-  string adj = "HELLA";
-  return adj;
-}
-std::string lookup_ending(string a, string b) {
+/**
+ * @brief Read the two adjectives from the user inputs in and store them in an
+array or vector.
+// Use the modulo division by the size of the array of your adjectives on the
+length of
+// the provided <NAME> to get an index that you can use to get an adjective from
+your array of adjectives
+*/
+
+std::string lookup_ending(string b) {
   string ending = "The end";
   return ending;
 }
@@ -32,15 +37,20 @@ std::string lookup_ending(string a, string b) {
  * @brief prints fortune based on string input using custom list of words
  *
  */
-void printFortune(std::string name, std ::string season, std::string a_01,
-                  std::string a_02) {
+void printFortune(std::string name, std ::string season, std::string adj,
+                  string noun, string ending) {
 
-  auto adj = generated_adjective(a_01, a_02);
-  auto ending = lookup_ending(a_01, a_02);
   // <NAME>, the <ADJECTIVE> <NOUN> that <ENDING>
-  cout << name + ", the "s + adj + " COOL GUY "s + " that "s + ending << endl;
+  cout << name + ", the "s + adj + " " + noun + " that "s + ending << endl;
 }
+std::map<string, string> noun = {{"spring", "STL guru"},
+                                 {"summer", "C++ expert"},
+                                 {"autumn", "coding beast"},
+                                 {"winter", "software design hero"}};
 
+const std::vector<string> ending{"eats UB for breakfast",
+                                 "finds errors quicker than the compiler",
+                                 "is not afraid of C++ error messages"};
 int main() {
   // Print a welcome statement:
   cout << " Welcome to the fortune teller program!\n";
@@ -49,18 +59,21 @@ int main() {
   std::string season;
   std::string adjective_01;
   std::string adjective_02;
-
+  std::vector<string> adj{};
   cout << "Please enter your name:";
   cin >> name;
 
   // Enter Ask the user when they were born:
   cout << "Please enter the time of year when  you were born: (pick from "
           "'spring', 'summer', 'autumn', 'winter'):";
-  cin >> season;
+  cin >> season; // need to type check this
   // Ask for adjectives:
   cout << "Please enter an adjective:";
-  cin >> adjective_01;
+  cin >> adjective_01; // type check this
+  adj.emplace_back(adjective_01);
   cout << "Please enter another:";
-  cin >> adjective_02;
-  printFortune(name, season, adjective_01, adjective_02);
+  cin >> adjective_02; // type check this
+  adj.emplace_back(adjective_02);
+  int mod = adj.size() % name.length();
+  printFortune(name, season, adj[mod - 1], noun[season], ending[mod - 1]);
 }
