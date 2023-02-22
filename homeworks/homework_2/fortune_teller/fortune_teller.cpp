@@ -53,7 +53,7 @@ const std::vector<string> ending{"eats UB for breakfast",
                                  "is not afraid of C++ error messages"};
 int main() {
   // Print a welcome statement:
-  cout << " Welcome to the fortune teller program!\n";
+  cout << "Welcome to the fortune teller program!\n";
   // Ask the user for their name:
   std::string name;
   std::string season;
