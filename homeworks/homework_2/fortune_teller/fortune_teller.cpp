@@ -76,7 +76,5 @@ int main() {
   adj.emplace_back(adjective_02);
   uint mod = name.length() % adj.size();
   uint mod2 = name.length() % adj.size();
-  cout << "size mod2:" << mod2 << endl;
-
-  printFortune(name, season, adj[mod], noun[season], ending[mod2-1]);
+  printFortune(name, season, adj[mod], noun[season], ending[mod2 - 1]);
 }
