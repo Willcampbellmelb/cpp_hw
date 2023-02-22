@@ -65,13 +65,13 @@ int main() {
 
   // Enter Ask the user when they were born:
   cout << "Please enter the time of year when  you were born:\n"
-          "(pick from spring', 'summer', 'autumn', 'winter'):\n";
+          "(pick from 'spring', 'summer', 'autumn', 'winter'):\n";
   cin >> season; // need to type check this
   // Ask for adjectives:
   cout << "Please enter an adjective:\n";
   cin >> adjective_01; // type check this
   adj.emplace_back(adjective_01);
-  cout << "Please enter another adjective::\n";
+  cout << "Please enter another adjective:\n";
   cin >> adjective_02; // type check this
   adj.emplace_back(adjective_02);
   int mod = adj.size() % name.length();
