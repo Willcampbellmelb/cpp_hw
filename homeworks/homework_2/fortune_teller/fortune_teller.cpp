@@ -39,7 +39,7 @@ std::string lookup_ending(string b) {
  */
 void printFortune(std::string name, std ::string season, std::string adj,
                   string noun, string ending) {
-        cout <<" Here is your description:"
+  cout << " Here is your description:\n";
   // <NAME>, the <ADJECTIVE> <NOUN> that <ENDING>
   cout << name + ", the "s + adj + " " + noun + " that "s + ending << endl;
 }
