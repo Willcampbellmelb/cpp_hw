@@ -19,7 +19,6 @@ using std::cout;
 using std::endl;
 using std::string;
 
-
 using std::string_literals::operator""s;
 /**
  * @brief Read the two adjectives from the user inputs in and store them in an
@@ -40,7 +39,7 @@ std::string lookup_ending(string b) {
  */
 void printFortune(std::string name, std ::string season, std::string adj,
                   string noun, string ending) {
-
+        cout <<" Here is your description:"
   // <NAME>, the <ADJECTIVE> <NOUN> that <ENDING>
   cout << name + ", the "s + adj + " " + noun + " that "s + ending << endl;
 }
@@ -65,7 +64,7 @@ int main() {
   cin >> name;
 
   // Enter Ask the user when they were born:
-  cout << "Please enter the time of year when  you were born: (pick from "
+  cout << "Please enter the time of year when  you were born: (pick from \n"
           "'spring', 'summer', 'autumn', 'winter'):\n";
   cin >> season; // need to type check this
   // Ask for adjectives:
