@@ -60,18 +60,18 @@ int main() {
   std::string adjective_01;
   std::string adjective_02;
   std::vector<string> adj{};
-  cout << "Please enter your name:";
+  cout << "Please enter your name:\n";
   cin >> name;
 
   // Enter Ask the user when they were born:
   cout << "Please enter the time of year when  you were born: (pick from "
-          "'spring', 'summer', 'autumn', 'winter'):";
+          "'spring', 'summer', 'autumn', 'winter'):\n";
   cin >> season; // need to type check this
   // Ask for adjectives:
-  cout << "Please enter an adjective:";
+  cout << "Please enter an adjective:\n";
   cin >> adjective_01; // type check this
   adj.emplace_back(adjective_01);
-  cout << "Please enter another:";
+  cout << "Please enter another:\n";
   cin >> adjective_02; // type check this
   adj.emplace_back(adjective_02);
   int mod = adj.size() % name.length();
