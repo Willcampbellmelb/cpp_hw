@@ -74,6 +74,9 @@ int main() {
   cout << "Please enter another adjective:\n";
   cin >> adjective_02; // type check this
   adj.emplace_back(adjective_02);
-  int mod = adj.size() % name.length();
-  printFortune(name, season, adj[mod - 1], noun[season], ending[mod - 1]);
+  uint mod = name.length() % adj.size();
+  uint mod2 = name.length() % adj.size();
+  cout << "size mod2:" << mod2 << endl;
+
+  printFortune(name, season, adj[mod], noun[season], ending[mod2-1]);
 }
