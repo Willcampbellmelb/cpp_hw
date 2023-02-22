@@ -39,7 +39,7 @@ std::string lookup_ending(string b) {
  */
 void printFortune(std::string name, std ::string season, std::string adj,
                   string noun, string ending) {
-  cout << " Here is your description:\n";
+  cout << "Here is your description:\n";
   // <NAME>, the <ADJECTIVE> <NOUN> that <ENDING>
   cout << name + ", the "s + adj + " " + noun + " that "s + ending << endl;
 }
@@ -64,14 +64,14 @@ int main() {
   cin >> name;
 
   // Enter Ask the user when they were born:
-  cout << "Please enter the time of year when  you were born: (pick from \n"
-          "'spring', 'summer', 'autumn', 'winter'):\n";
+  cout << "Please enter the time of year when  you were born:"
+          "(pick from spring', 'summer', 'autumn', 'winter'):\n";
   cin >> season; // need to type check this
   // Ask for adjectives:
   cout << "Please enter an adjective:\n";
   cin >> adjective_01; // type check this
   adj.emplace_back(adjective_01);
-  cout << "Please enter another:\n";
+  cout << "Please enter another adjective::\n";
   cin >> adjective_02; // type check this
   adj.emplace_back(adjective_02);
   int mod = adj.size() % name.length();
