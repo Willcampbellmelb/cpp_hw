@@ -19,6 +19,7 @@ using std::cout;
 using std::endl;
 using std::string;
 
+
 using std::string_literals::operator""s;
 /**
  * @brief Read the two adjectives from the user inputs in and store them in an
