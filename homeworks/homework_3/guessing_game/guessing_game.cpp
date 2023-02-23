@@ -43,7 +43,7 @@ void playGame() {
       cout << "Your number is too big. Try again!\n";
     } else {
       // Winner winner chicken dinner
-      cout << "You've done it! You guessed the number " << rand_num << " in "
+      cout << " You've done it! You guessed the number " << rand_num << " in "
            << num_gueses << " guesses!\n";
       win = true;
     }
