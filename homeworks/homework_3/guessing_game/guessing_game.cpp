@@ -31,11 +31,11 @@ void playGame() {
   cin >> largest;
   // generate random number
 
-  int rand_num = GenerateRandomNum(smallest, largest);
+  const int rand_num = GenerateRandomNum(smallest, largest);
   cout << "I've generated a number. Try to guess it!\n";
   while (!win) {
     num_gueses++;
-    cout << "Please provide the next guess:";
+    cout << "Please provide the next guess: ";
     if (!(std::cin >> guess)) {
       std::cerr << "Invalid input. Please enter a valid integer." << std::endl;
       std::cin.clear();
@@ -48,7 +48,7 @@ void playGame() {
       cout << "Your number is too big. Try again!\n";
     } else {
       // Winner winner chicken dinner
-      cout << " You've done it! You guessed the number " << rand_num << " in "
+      cout << "You've done it! You guessed the number " << rand_num << " in "
            << num_gueses << " guesses!\n";
       win = true;
     }
