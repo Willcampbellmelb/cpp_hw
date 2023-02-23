@@ -36,7 +36,12 @@ void playGame() {
   while (!win) {
     num_gueses++;
     cout << "Please provide the next guess:";
-    cin >> guess;
+    if (!(std::cin >> guess)) {
+      std::cerr << "Invalid input. Please enter a valid integer." << std::endl;
+      std::cin.clear();
+      std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+      continue;
+    }
     if (guess < rand_num) {
       cout << "Your number is too small. Try again!\n";
     } else if (guess > rand_num) {
