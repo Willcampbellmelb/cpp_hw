@@ -74,9 +74,11 @@ int main() {
   cout << "Please enter another adjective:\n";
   cin >> adjective_02; // type check this
   adj.emplace_back(adjective_02);
-  uint adj_index = name.size() % adj.size();
+  uint adj_index = name.size() % adj.size() - 1;
   adj_index = adj_index > adj.size() - 1 ? adj.size() - 1
                                          : adj_index; // check out of bounds
+  cout << adj_index << endl;
+
   uint end_index = name.size() % ending.size();
   adj_index = end_index > ending.size() - 1 ? ending.size() - 1
                                             : end_index; // check out of bounds
