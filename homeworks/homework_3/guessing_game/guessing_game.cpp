@@ -22,9 +22,9 @@ void playGame() {
   int num_gueses{0};
   bool win{false};
 
-  cout << "Welcome to the GUESSING GAME !\n I will generate a number and you "
-          "will guess it !\n ";
-  cout << "Please provide the smallest number:\n";
+  cout << "Welcome to the GUESSING GAME!\n"
+       << "I will generate a number and you will guess it!\n"
+       << "Please provide the smallest number:\n";
   cin >> smallest;
   // get largest
   cout << "Please provide the largest number:\n";
@@ -32,11 +32,10 @@ void playGame() {
   // generate random number
 
   int rand_num = GenerateRandomNum(smallest, largest);
-  cout << "Random number " << rand_num << endl;
-
+  cout << "I've generated a number. Try to guess it!\n";
   while (!win) {
     num_gueses++;
-    cout << "Please provide the next guess:";
+    cout << "Please provide the next guess:\n";
     cin >> guess;
     if (guess < rand_num) {
       cout << "Your number is too small. Try again!\n";
