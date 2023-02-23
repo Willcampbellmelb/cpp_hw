@@ -35,7 +35,7 @@ void playGame() {
   cout << "I've generated a number. Try to guess it!\n";
   while (!win) {
     num_gueses++;
-    cout << "Please provide the next guess:\n";
+    cout << "Please provide the next guess:";
     cin >> guess;
     if (guess < rand_num) {
       cout << "Your number is too small. Try again!\n";
